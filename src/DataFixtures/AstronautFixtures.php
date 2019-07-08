@@ -110,4 +110,15 @@ class AstronautFixtures extends Fixture implements DependentFixtureInterface
 
         $manager->flush();
     }
+
+    /**
+     * This method must return an array of fixtures classes
+     * on which the implementing class depends on
+     *
+     * @return array
+     */
+    public function getDependencies()
+    {
+        // TODO: Implement getDependencies() method.
+    }
 }
