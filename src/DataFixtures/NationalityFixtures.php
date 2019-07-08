@@ -60,6 +60,11 @@ class NationalityFixtures extends Fixture
         $manager->persist($indian);
         $this->setReference("nationality-indian", $indian);
 
+        $german = new Nationality();
+        $german->setLabel("German");
+        $manager->persist($german);
+        $this->setReference("nationality-german", $german);
+
         $manager->flush();
     }
 }
