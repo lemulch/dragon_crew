@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello LauncherController!{% endblock %}
+
+{% block body %}
+    <ul>
+        {% for launcher in launchers %}
+            <li>
+                {{ launcher.name }}
+                {{ launcher.type }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

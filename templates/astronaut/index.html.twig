@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AstronautController!{% endblock %}
+
+{% block body %}
+    <ul>
+        {% for astronaut in astronauts %}
+            <li>
+                {{ astronaut.surname }}
+                {{ astronaut.name }}
+            </li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}
