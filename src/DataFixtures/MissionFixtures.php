@@ -2,23 +2,40 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Mission;
 use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 
-class MissionFixtures extends Fixture
+class MissionFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager)
     {
         $mission1 = new Mission();
         $mission1->setUsefullcharge("Spektr-RG");
-        $mission1->setlaunchtime(date_time_set(12/07/2019));
-        $mission1->setLauncher($this->getReference("launcher-Falcon Heavy"));
-        $mission1->setSpatialCenter($this->getReference("spatialcenter-Florida"));
+        $mission1->setLaunchTime(new \DateTime("2019-07-12"));
+        $mission1->setLauncher($this->getReference("launcher-falconheavy"));
+        $mission1->setSpacialCenter($this->getReference("spacialcenter-spacialcenter1"));
         $mission1->setOperator($this->getReference("operator-Space X"));
 
 
         $manager->persist($mission1);
 
         $manager->flush();
+    }
+
+    /**
+     * This method must return an array of fixtures classes
+     * on which the implementing class depends on
+     *
+     * @return array
+     */
+    public function getDependencies()
+    {
+        return [
+            LauncherFixtures::class,
+            SpacialCenterFixtures::class,
+            OperatorFixtures::class
+        ];
     }
 }

@@ -40,7 +40,7 @@ class Mission
     private $launcher;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\SpatialCenter", inversedBy="missions")
+     * @ORM\ManyToOne(targetEntity="App\Entity\SpacialCenter", inversedBy="missions")
      * @ORM\JoinColumn(nullable=false)
      */
     private $spacialCenter;
@@ -114,12 +114,12 @@ class Mission
         return $this;
     }
 
-    public function getSpacialCenter(): ?SpatialCenter
+    public function getSpacialCenter(): ?SpacialCenter
     {
         return $this->spacialCenter;
     }
 
-    public function setSpacialCenter(?SpatialCenter $spacialCenter): self
+    public function setSpacialCenter(?SpacialCenter $spacialCenter): self
     {
         $this->spacialCenter = $spacialCenter;
 

@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\SpatialCenter;
+use App\Entity\SpacialCenter;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
- * @method SpatialCenter|null find($id, $lockMode = null, $lockVersion = null)
- * @method SpatialCenter|null findOneBy(array $criteria, array $orderBy = null)
- * @method SpatialCenter[]    findAll()
- * @method SpatialCenter[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method SpacialCenter|null find($id, $lockMode = null, $lockVersion = null)
+ * @method SpacialCenter|null findOneBy(array $criteria, array $orderBy = null)
+ * @method SpacialCenter[]    findAll()
+ * @method SpacialCenter[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class SpatialCenterRepository extends ServiceEntityRepository
+class SpacialCenterRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, SpatialCenter::class);
+        parent::__construct($registry, SpacialCenter::class);
     }
 
     // /**
-    //  * @return SpatialCenter[] Returns an array of SpatialCenter objects
+    //  * @return SpacialCenter[] Returns an array of SpacialCenter objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class SpatialCenterRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?SpatialCenter
+    public function findOneBySomeField($value): ?SpacialCenter
     {
         return $this->createQueryBuilder('s')
             ->andWhere('s.exampleField = :val')
