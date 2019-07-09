@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MissionController!{% endblock %}
+
+{% block body %}
+
+    <ul>
+        {% for mission in missions %}
+            <li>
+                {{ mission.launchTime|date('d m Y') }}
+                {{ mission.launcher.name }}
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
