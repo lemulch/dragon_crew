@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
@@ -9,11 +10,40 @@
     </head>
     <body>
 
-        <header></header>
+        <header>
+
+                <section class="container">
+
+                    <a href="#" id="logo">
+                        <p>Dragon Crew</p>
+                    </a>
+
+                    <nav id="main_nav">
+                        <ul>
+                            <li><a href="#">Prochains vols</a></li>
+                            <li><a href="#">Astronautes</a></li>
+                            <li><a href="#">Fusées</a></li>
+                            <li><a href="#">Live View</a></li>
+
+                            <button class="dropbtn"><a href="#">Connexion</a></button>
+
+                            <li> <a href="#" id="login">
+                                    <p>Inscription</p>
+                                </a></li>
+
+
+                        </ul>
+                    </nav>
+
+                </section>
+
+        </header>
 
         {% block body %}{% endblock %}
 
-        <footer></footer>
+        <footer>
+
+        </footer>
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}

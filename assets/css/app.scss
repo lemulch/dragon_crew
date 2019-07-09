@@ -1,8 +1,32 @@
+@import "header";
+
 body {
-    background-color: lightgray;
+
+    main {
+        width: 1020px;
+        margin: 0 auto;
+    }
+
+
+
+    h1#gros-titre  {
+        text-align: left;
+        margin-top: 220px;
+        color: #fff;
+        font-size: 2em;
+    }
+
+
+    h1#gros-titre span {
+        text-align: left;
+        margin-top: 220px;
+        color: #fff;
+        font-size: 3.5em;
+    }
+
 
     h1 {
-        color: red;
+        color: blue;
     }
 
 }

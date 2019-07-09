@@ -1,0 +1,129 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  background-image: url('../images/Background_Image.png');
+  background-repeat: no-repeat;
+  background-color: black;
+  /* Full height */
+  height: 100%;
+}
+
+@charset "UTF-8";
+
+/*INDISPENSABLES*/
+
+/*Boites*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*Clearfix*/
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Texte caché*/
+
+.hidden_text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/*Navigations*/
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* Flex */
+
+.container {
+  display: flex;
+  background-color: black;
+}
+
+.block {
+  display: block;
+}
+
+/* -------- HEADER --------- */
+
+header {
+  background-color: #000;
+  height: 120px;
+}
+
+/* Logo */
+
+a#logo {
+  margin-left: 220px;
+  margin-top: 22px;
+  color: white;
+  font-size: 2em;
+}
+
+
+/* Navigation princiaple */
+
+nav#main_nav ul {
+  display: table;
+  margin-left: 120px;
+  margin-top: 50px;
+}
+
+nav#main_nav ul li {
+  display: table-cell;
+}
+
+nav#main_nav ul li a {
+  display: block;
+  margin-right: 15px;
+  margin-left: 10px;
+  color: #fff;
+  font-size: 1em;
+}
+
+nav#main_nav ul li a:hover {
+  color: lightgray;
+}
+
+/* Boutons */
+
+.dropbtn {
+  font-size: 16px;
+  border: 2px solid #707070;
+  border-radius: 23px;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: #707070;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin-left: 100px; /* Important for vertical align on mobile phones */
+  text-decoration: none;
+}
+
+
+
+a {
+  text-decoration: none;
+  color: #fff;
+
+}
+
+li a#login:hover{
+  text-decoration: underline;
+}
