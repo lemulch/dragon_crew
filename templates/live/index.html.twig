@@ -9,9 +9,12 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Live from ISS ✅</h1>
+    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    <iframe width="1184" height="666" src="https://www.youtube.com/embed/4993sBLAzGA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ '/Applications/MAMP/htdocs/dragon_crew/src/Controller/LiveController.php'|file_link(0) }}">src/Controller/LiveController.php</a></code></li>
+        <li>Your template at <code><a href="{{ '/Applications/MAMP/htdocs/dragon_crew/templates/live/index.html.twig'|file_link(0) }}">templates/live/index.html.twig</a></code></li>
+    </ul>
 </div>
 {% endblock %}
