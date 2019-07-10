@@ -14,18 +14,18 @@
 
                 <section class="container">
 
-                    <a href="#" id="logo">
+                    <a href="{{ path('homepage') }}" id="logo">
                         <p>Dragon Crew</p>
                     </a>
 
                     <nav id="main_nav">
                         <ul>
-                            <li><a href="#">Prochains vols</a></li>
-                            <li><a href="#">Astronautes</a></li>
-                            <li><a href="#">Fusées</a></li>
-                            <li><a href="#">Live View</a></li>
+                            <li><a href="{{ path('mission') }}">Prochains vols</a></li>
+                            <li><a href="{{ path('astronaut') }}">Astronautes</a></li>
+                            <li><a href="{{ path('launcher') }}">Fusées</a></li>
+                            <li><a href="{{ path('live') }}">Live View</a></li>
 
-                            <button class="dropbtn"><a href="#">Connexion</a></button>
+                            <button class="dropbtn"><a href="{{ path('app_login') }}">Connexion</a></button>
 
                             <li> <a href="#" id="login">
                                     <p>Inscription</p>
