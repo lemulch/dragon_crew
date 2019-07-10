@@ -3,14 +3,7 @@
 {% block title %}Hello AstronautController!{% endblock %}
 
 {% block body %}
-    <ul>
-        {% for astronaut in astronauts %}
-            <li>
-                {{ astronaut.surname }}
-                {{ astronaut.name }}
-            </li>
-        {% endfor %}
-    </ul>
+
 
 
     <h1 id="gros-titre">Astronautes</h1>
@@ -30,15 +23,20 @@
             </thead>
 
             <tbody>
+                {% for astronaut in astronauts %}
 
-            <tr class="profil-mention">
-                <td><img src="{{ asset('uploads/Thomas_Pesquet_Img.png')}}"/></td>
-                <td>Thomas Pesquet</td>
-                <td>42 ans</td>
-                <td>2</td>
-                <td>1465j</td>
-                <td>Française</td>
-            </tr>
+
+                        <tr class="profil-mention">
+                            <td><img src="{{ asset('uploads/Thomas_Pesquet_Img.png')}}"/></td>
+                            <td>{{ astronaut.fullname }}</td>
+                            <td>{{ astronaut.age }} ans</td>
+                            <td>{{ astronaut.missionNumber }} </td>
+                            <td>1465j</td>
+                            <td>Française</td>
+                        </tr>
+                {% endfor %}
+
+
 
             <tr class="profil-mention">
                 <td><img src="images/Frank_De_Winne_Img.png" class="profil"></td>

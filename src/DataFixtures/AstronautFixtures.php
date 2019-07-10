@@ -17,6 +17,7 @@ class AstronautFixtures extends Fixture implements DependentFixtureInterface
         $astronaut1->setBirthdate(new \DateTime("1985-01-01"));
         $astronaut1->setNationality($this->getReference("nationality-french"));
         $astronaut1->setSex($this->getReference("sex-man"));
+        $astronaut1->addMission($this->getReference("Spektr-RG"));
         $manager->persist($astronaut1);
 
         $astronaut2 = new Astronaut();

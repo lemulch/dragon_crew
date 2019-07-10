@@ -145,4 +145,24 @@ class Astronaut
 
         return $this;
     }
+
+    public function getFullname()
+    {
+        return $this->getName() . " " . $this->getSurname();
+    }
+
+    public function getMissionNumber()
+    {
+        return $this->getMissions()->count($this->missions);
+    }
+
+    /**
+     * @return int
+     * @throws \Exception
+     */
+    public function getAge()
+    {
+        return $this->getBirthdate()->diff(new \DateTime())->y;
+    }
+
 }

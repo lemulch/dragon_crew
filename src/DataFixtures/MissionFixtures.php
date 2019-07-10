@@ -17,6 +17,7 @@ class MissionFixtures extends Fixture implements DependentFixtureInterface
         $mission1->setLauncher($this->getReference("launcher-falconheavy"));
         $mission1->setSpacialCenter($this->getReference("spacialcenter-spacialcenter1"));
         $mission1->setOperator($this->getReference("operator-Space X"));
+        $this->setReference("Spektr-RG", $mission1);
 
 
         $manager->persist($mission1);
