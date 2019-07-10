@@ -3,16 +3,24 @@
 {% block title %}Hello LauncherController!{% endblock %}
 
 {% block body %}
-    <ul>
+
         {% for launcher in launchers %}
-            <li>
+
                 {{ launcher.name }}
                 {{ launcher.type }}
                 {{ launcher.constructor }}
+                <tr class="profil-mention">
+                    <td><img src="{{ asset('images/Vol_1.png')}}"/></td>
+                    <td>{{ launcher.name }}</td>
+                    <td>{{ launcher.type }}</td>
+                    <td>{{ launcher.constructor }}</td>
+                    <td><img src="images/Flag_FR.png" class="country"></td>
 
-            </li>
+                </tr>
+
+
         {% endfor %}
-    </ul>
+
 
     <main>
 
