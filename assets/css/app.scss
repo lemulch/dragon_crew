@@ -29,4 +29,47 @@ body {
         color: blue;
     }
 
+
+    /* TABLE */
+
+    img.profil {
+        height: 50px;
+    }
+
+    img.country {
+        height: 25px;
+    }
+
+    table {
+        height: auto;
+        text-align: center;
+
+    }
+
+    tr.profil-mention td {
+        color: #fff;
+        font-size: 1em;
+    }
+
+
+    tr th {
+        color: #fff;
+        font-size: 1.5em;
+    }
+
+    .mention th {
+        padding-left: 30px;
+        padding-top: 10px;
+        justify-content: center;
+    }
+
+    td {
+        justify-content: center;
+    }
+
+    #hidden {
+        visibility: hidden;
+    }
+
+
 }
