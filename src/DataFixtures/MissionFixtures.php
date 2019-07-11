@@ -22,6 +22,8 @@ class MissionFixtures extends Fixture implements DependentFixtureInterface
 
         $manager->persist($mission1);
 
+
+
         $manager->flush();
     }
 

@@ -33,7 +33,7 @@ class AstronautFixtures extends Fixture implements DependentFixtureInterface
         $astronaut3 = new Astronaut();
         $astronaut3->setName("McClain");
         $astronaut3->setSurname("Anne");
-        $astronaut3->setPhoto("Thomas_Pesquet_Img.png");
+        $astronaut3->setPhoto("Frank_De_Winne_Img.png");
         $astronaut3->setBirthdate(new \DateTime("1981-01-01"));
         $astronaut3->setNationality($this->getReference("nationality-american"));
         $astronaut3->setSex($this->getReference("sex-woman"));

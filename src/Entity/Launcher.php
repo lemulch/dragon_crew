@@ -38,6 +38,11 @@ class Launcher
      */
     private $missions;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $photo;
+
     public function __construct()
     {
         $this->missions = new ArrayCollection();
@@ -111,6 +116,18 @@ class Launcher
                 $mission->setLauncher(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getPhoto(): ?string
+    {
+        return $this->photo;
+    }
+
+    public function setPhoto(string $photo): self
+    {
+        $this->photo = $photo;
 
         return $this;
     }
