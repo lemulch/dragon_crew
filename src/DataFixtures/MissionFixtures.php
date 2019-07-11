@@ -22,6 +22,17 @@ class MissionFixtures extends Fixture implements DependentFixtureInterface
 
         $manager->persist($mission1);
 
+        $mission2 = new Mission();
+        $mission2->setUsefullcharge("Tesla Roadster");
+        $mission2->setLaunchTime(new \DateTime("2030-07-12"));
+        $mission2->setLauncher($this->getReference("launcher-falconheavy"));
+        $mission2->setSpacialCenter($this->getReference("spacialcenter-spacialcenter1"));
+        $mission2->setOperator($this->getReference("operator-nasa"));
+        $this->setReference("Tesla Roadster", $mission2);
+
+
+        $manager->persist($mission2);
+
         $manager->flush();
     }
 
