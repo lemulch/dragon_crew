@@ -28,10 +28,10 @@
             <tr class="profil-mention">
                 <td>{{ mission.usefullCharge }}</td>
                 <td>{{ mission.usefullCharge }}</td>
-                <td>{{ mission.launcher }}</td>
-                <td>2</td>
-                <td>{{ mission.spacialCenter }}</td>
-                <td>{{ mission.launchTime }}</td>
+                <td>{{ mission.launcher.name }}</td>
+                <td>{{ mission.launcher.missions|length }}</td>
+                <td>{{ mission.spacialCenter.name }}</td>
+                <td>{{ mission.launchTime|date('d/m/y') }}</td>
             </tr>
 
         {% endfor %}

@@ -24,7 +24,7 @@ class AstronautFixtures extends Fixture implements DependentFixtureInterface
         $astronaut2 = new Astronaut();
         $astronaut2->setName("Saint-Jacques");
         $astronaut2->setSurname("David");
-        $astronaut2->setPhoto("Thomas_Pesquet_Img.png");
+        $astronaut2->setPhoto("Ivan_Vagner_Img.png");
         $astronaut2->setBirthdate(new \DateTime("1982-01-01"));
         $astronaut2->setNationality($this->getReference("nationality-canadian"));
         $astronaut2->setSex($this->getReference("sex-man"));

@@ -158,7 +158,7 @@ class Astronaut
 
     public function getMissionNumber()
     {
-        return $this->getMissions()->count($this->missions);
+        return $this->getMissions()->count();
     }
 
     /**
