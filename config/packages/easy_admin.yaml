@@ -1,6 +1,11 @@
 easy_admin:
     entities:
         # List the entity class name you want to manage
-        - App\Entity\Astronaut
-        - App\Entity\Launcher
-        - App\Entity\Mission
+        Astronaut:
+            class: App\Entity\Astronaut
+        Launcher:
+            class: App\Entity\Launcher
+        Mission:
+            class: App\Entity\Mission
+        User:
+            class: App\Entity\User

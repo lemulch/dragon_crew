@@ -25,9 +25,13 @@
                             <li><a href="{{ path('launcher') }}">Fusées</a></li>
                             <li><a href="{{ path('live') }}">Live View</a></li>
 
-                            <button class="dropbtn"><a href="{{ path('app_login') }}">Connexion</a></button>
+                            {% if app.user %}
+                                <button class="dropbtn"><a href="{{ path('app_logout') }}">Déconnexion</a></button>
+                            {% else %}
+                                <button class="dropbtn"><a href="{{ path('app_login') }}">Connexion</a></button>
+                            {% endif %}
 
-                            <li> <a href="#" id="login">
+                            <li> <a href="register" id="login">
                                     <p>Inscription</p>
                                 </a></li>
 
