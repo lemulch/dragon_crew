@@ -3,17 +3,45 @@
 {% block title %}Hello LauncherController!{% endblock %}
 
 {% block body %}
-    <ul>
+<main>
+
+    <h1 id="gros-titre">Fusées</h1>
+
+    <section>
+        <table>
+            <thead>
+            <tr class="mention">
+                <th colspan="1" id="hidden">Photo</th>
+                <th colspan="1">Nom</th>
+                <th colspan="1">Type de propulsion</th>
+                <th colspan="1">Constructor</th>
+                <th colspan="1">Nationalité</th>
+            </tr>
+            </thead>
+
         {% for launcher in launchers %}
-            <li>
-                {{ launcher.name }}
-                {{ launcher.type }}
-                {{ launcher.constructor }}
+            <thead>
+                <tr class="profil-mention">
+                    <td><img src="{{ asset('images/Vol_1.png')}}"/></td>
+                    <td>{{ launcher.name }}</td>
+                    <td>{{ launcher.type }}</td>
+                    <td>{{ launcher.constructor }}</td>
+                    <td><img src="images/Flag_FR.png" class="country"></td>
 
-            </li>
+                </tr>
+            </thead>
+
         {% endfor %}
-    </ul>
 
 
+
+
+
+
+        </table>
+
+    </section>
+
+    </main>
 
 {% endblock %}
